@@ -34,7 +34,7 @@ public class MailIndexerApplication implements CommandLineRunner{
 
 				mailRepository.save(
 						MailDocumentModel.builder()
-								.withId(mail.getContentMD5())
+								.withId(mail.getContentID())
 								.withContentType(mail.getContentType())
 								.withSubject(mail.getSubject())
 								.withDate(mail.getSentDate())
