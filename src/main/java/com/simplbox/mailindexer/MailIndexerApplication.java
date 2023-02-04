@@ -34,13 +34,13 @@ public class MailIndexerApplication implements CommandLineRunner{
 
 				mailRepository.save(
 						MailDocumentModel.builder()
-								.withId(mail.getContentID())
-								.withContentType(mail.getContentType())
-								.withSubject(mail.getSubject())
-								.withDate(mail.getSentDate())
-								.withFrom(Arrays.asList(mail.getFrom()))
-								.withRecipients(Arrays.asList(mail.getAllRecipients()))
-								.withReplyTo(Arrays.asList(mail.getReplyTo()))
+								.id(mail.getContentID())
+								.contentType(mail.getContentType())
+								.subject(mail.getSubject())
+								.date(mail.getSentDate())
+								.from(Arrays.asList(mail.getFrom()))
+								.recipients(Arrays.asList(mail.getAllRecipients()))
+								.replyTo(Arrays.asList(mail.getReplyTo()))
 								.build()
 				);
 
